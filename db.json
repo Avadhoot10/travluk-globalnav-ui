@@ -1,0 +1,166 @@
+{
+  "topMenu":  [
+    {
+      "navItemType": "pageLink",
+      "name": "Home",
+      "link": "www.Home.com"
+    },
+    {
+      "navItemType": "pageLink",
+      "name": "About Us",
+      "link": "www.Home.com"
+    },
+    {
+      "navItemType": "dropDown",
+      "name": "Holiday Themes",
+      "layoutType": "column",
+      "totalCols": "3",
+      "link": "www.Holidaythemes.com",
+      "subChild": [
+        {
+          "name": "Nature",
+          "type": "content",
+          "link": "www.Nature.com"
+        },
+        {
+          "name": "Wildlife",
+          "type": "content",
+          "link": "www.Wildlife.com"
+        },
+        {
+          "name": "Seasonal Packages",
+          "type": "content",
+          "link": "www.Seasonalpackages.com"
+        },
+        {
+          "name": "Adventure",
+          "type": "content",
+          "link": "www.Adventure.com"
+        }
+      ]
+    },
+    {
+      "navItemType": "dropDown",
+      "name": "Vibe Check",
+      "link": "www.VibeCheck.com",
+      "subChild": [
+        {
+          "name": "Beach Serenity",
+          "type": "content",
+          "link": "www.Beaches.com"
+        },
+        {
+          "name": "Mountains thrill",
+          "type": "content",
+          "link": "www.kerala.com"
+        }
+      ]
+    },
+    {
+      "navItemType": "megaMenu",
+      "name": "Honeymoon Packages",
+      "layoutType": "row",
+      "totalCols": "3",
+      "subChild": [
+        {
+          "name": "Indian Destination",
+          "type": "content",
+          "menu": [
+            {
+              "name": "Manali",
+              "link": "www.kerala.com"
+            },
+            {
+              "name": "Andaman",
+              "link": "www.andaman.com"
+            },
+            {
+              "name": "Goa",
+              "link": "www.andaman.com"
+            }
+          ]
+
+        },
+        {
+          
+          "name": "International Destination",
+          "type": "content",
+          "menu": [
+            {
+              "name": "Paris",
+              "link": "www.paris.com"
+            },
+            {
+              "name": "Maldives",
+              "link": "www.maldives.com"
+            },
+            {
+              "name": "Singapore ",
+              "link": "www.maldives.com"
+            }
+          ]
+
+        },
+        {
+          "name": "",
+          "type": "image",
+          "imageUrl": "../../assets/HoneyMoon.jpg",
+          "height": "100%",
+          "width": "100%"
+        }
+      ]
+    },
+    {
+      "navItemType": "megaMenu",
+      "name": "Family Packages",
+      "layoutType": "column",
+      "totalCols": "3",
+      "subChild": [
+        {
+          "name": "Indian Destination",
+          "type": "content",
+          "menu": [
+            
+            {
+              "name": "Kerala",
+              "link": "www.kerala.com"
+            },
+            {
+              "name": "Andaman",
+              "link": "www.andaman.com"
+            }, {
+              "name": "Kokan",
+              "link": "www.andaman.com"
+            }
+          ]
+        },
+        {
+          "name": "International Destination",
+          "type": "content",
+          "menu": [
+            {
+              "name": "Paris",
+              "link": "www.paris.com"
+            },
+            {
+              "name": "Maldives",
+              "link": "www.maldives.com"
+            }
+          ]
+        },
+        {
+          "name": "",
+          "type": "image",
+          "imageUrl": "../../assets/resize-1705044796984776393FMT.jpg",
+          "height": "100%",
+          "width": "100%"
+        }
+      ]
+    },
+    {
+      "navItemType": "pageLink",
+      "name": "Feedback",
+      "link": "www.Home.com"
+    }
+  ]
+}

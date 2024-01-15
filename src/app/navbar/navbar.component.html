@@ -1,0 +1,65 @@
+<nav>
+  <div class="wrapper">
+    <div class="logo"><a href="#">Travluk</a></div>
+    <input type="radio" name="slider" id="menu-btn">
+    <input type="radio" name="slider" id="close-btn">
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+      <span *ngFor="let item of topMenu ">
+        <li *ngIf="item.navItemType=='pageLink'"><a href="#">{{item.name}}</a></li>
+        <!-- Dropdown -->
+        <li *ngIf="item.navItemType=='dropDown'">
+          <a href="#" class="desktop-item ">{{item.name}}</a>
+          <input type="checkbox" id="{{'showDrop' + item.name}}" class="showDrop">
+          <label for="{{'showDrop' + item.name}}" class="mobile-item">{{item.name}}</label>
+          <ul class="drop-menu">
+            <li *ngFor="let dropDownItem of item.subChild"><a href="#">{{dropDownItem.name}}</a></li>
+          </ul>
+        </li>
+        <!-- Mega Menu -->
+        <li *ngIf="item.navItemType=='megaMenu'">
+          <a href="#" class="desktop-item ">{{item.name}}</a>
+          <input type="checkbox" id="{{'showMega' + item.name}}" class="showMega">
+          <label for="{{'showMega' + item.name}}" class="mobile-item">{{item.name}}</label>
+          <!-- Below Code used to display column layout of mega box  -->
+          <div *ngIf="item.layoutType=='column'" class="mega-box">
+            <div class="content">
+              <div class="row" *ngFor="let subMenu of item.subChild">
+                <div *ngIf="subMenu.type=='image'" class="row">
+                  <img src="{{subMenu.imageUrl}}" alt="">
+                </div>
+                <div *ngIf="subMenu.type=='content'">
+                  <header>{{subMenu.name}} </header>
+                  <ul class="mega-links">
+                    <li *ngFor="let menu1 of subMenu.menu"><a href="#">{{menu1.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Below Code used to display Row layout of mega box -->
+          <div *ngIf="item.layoutType=='row'" class="mega-box">
+            <div class="contentRowLayout">
+              <div class="row" *ngFor="let subMenu of item.subChild">
+                <div *ngIf="subMenu.type=='image'" class="row">
+                  <img src="{{subMenu.imageUrl}}" alt="">
+                </div>
+                <div *ngIf="subMenu.type=='content'">
+                  <header>{{subMenu.name}}</header>
+                  <ul class="mega-links">
+                    <li *ngFor="let menu1 of subMenu.menu"><a href="#">{{menu1.name}}</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </span>
+    </ul>
+    <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+  </div>
+</nav>
+
+<div class="body-text">
+  <div class="title">Responsive Dropdown and Mega Menu</div>
+</div>
